@@ -1,5 +1,8 @@
 """
-author: Michael Bock (mbock [at] edmunds [dot] com)
+Edmunds.com API Python wrapper
+Edmunds API Documentation: http://developer.edmunds.com/
+
+author: Michael Bock <mbock@edmunds.com>
 version: 0.0.1
 """
 
@@ -35,4 +38,5 @@ class Edmunds:
 		url = self.BASE_URL + endpoint
 		# make request
 		r = requests.get(url, params=payload)
+		print r.url
 		return r.json()
