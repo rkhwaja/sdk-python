@@ -74,5 +74,9 @@ The Edmunds API Python wrapper requires the amazing [requests library](http://do
 Here are the [installation instructions](http://docs.python-requests.org/en/latest/user/install/#install) and the
 [source code](https://github.com/kennethreitz/requests/).
 
+##Issues
+
+Please submit any problems, requests, and comments [here](https://github.com/EdmundsAPI/sdk-python/issues).
+
 ##License
 TBD
