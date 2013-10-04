@@ -1,3 +1,5 @@
+###THE EDMUNDS API PYTHON WRAPPER IS UNDER DEVELOPMENT!
+
 #Edmunds API Python Wrapper
 
 This is an awesome Python wrapper for the [Edmunds.com API](http://developer.edmunds.com/api-documentation/overview/index.html).
