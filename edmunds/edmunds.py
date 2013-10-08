@@ -10,12 +10,20 @@ import requests
 from types import StringType
 
 class Edmunds:
-	"""docstring"""
+	"""
+	The Edmunds API wrapper class
+	"""
+	
 	BASE_URL = 'https://api.edmunds.com'
 	BASE_MEDIA = 'http://media.ed.edmunds-media.com'
 
 	def __init__(self, key):
-		"""docstring"""
+		"""
+		Constructor for Edmunds class
+
+		:param key: Edmunds API key
+		:type key: str
+		"""
 		if not isinstance(key, StringType):
 			raise Exception('key not a StringType; class not instantiated')
 		self.parameters = {'api_key' : key, 'fmt': 'json'}
@@ -26,10 +34,12 @@ class Edmunds:
 		>>> make_call('/v1/api/vehiclephoto/service/findphotosbystyleid', comparator='simple', styleId='3883')
 		>>> make_call('/api/vehicle/v2/lexus/rx350/2011/styles')
 
+		Info about **kwargs: http://stackoverflow.com/questions/1769403/understanding-kwargs-in-python
+
 		:param endpoint: Edmunds API endpoint, e.g. '/v1/api/vehiclephoto/service/findphotosbystyleid' or '/api/vehicle/v2/lexus/rx350/2011/styles'
 		:type endpoint: str
-		:param kwargs: List of extra parameters to be put into URL query string, view='full' or comparator='simple', styleId='3883'
-		:type kwargs: List of key: value pairs, where the value is a str
+		:param kwargs: List of extra parameters to be put into URL query string, e.g. view='full' or comparator='simple', styleId='3883'
+		:type kwargs: List of key=value pairs, where the value is a str
 		:returns: API response
 		:rtype: JSON object
 		"""
@@ -38,5 +48,4 @@ class Edmunds:
 		url = self.BASE_URL + endpoint
 		# make request
 		r = requests.get(url, params=payload)
-		print r.url
 		return r.json()
