@@ -2,4 +2,4 @@
 * Michael Bock \<mbock@edmunds.com\>
 
 ##Patches and Suggestions?
-* You? Email api@edmunds.com
+* Email api@edmunds.com or open an [issue](https://github.com/EdmundsAPI/sdk-python/issues).
