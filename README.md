@@ -1,6 +1,6 @@
-###THE EDMUNDS API PYTHON WRAPPER IS UNDER DEVELOPMENT!
+### THE EDMUNDS API PYTHON WRAPPER IS UNDER DEVELOPMENT!
 
-#Edmunds API Python Wrapper
+# Edmunds API Python Wrapper
 
 This is an awesome Python 2 wrapper for the [Edmunds.com API](http://developer.edmunds.com/api-documentation/overview/index.html).
 The Edmunds.com API provides automative data including [vehicle specs](http://developer.edmunds.com/api-documentation/vehicle/), 
@@ -9,7 +9,7 @@ The Edmunds.com API provides automative data including [vehicle specs](http://de
 There are also Edmunds API endpoints for [dealership information](http://developer.edmunds.com/api-documentation/dealer/) 
 and [Edmunds editorial content](http://developer.edmunds.com/api-documentation/editorial/).
 
-##Usage
+## Usage
 Enter your [Edmunds API key](http://edmunds.mashery.com/member/register/):
 ```python
 from edmunds import Edmunds
@@ -68,15 +68,34 @@ for the style ID 3883 (1990 Honda Civic 2dr Hatchback):
   u'type': u'PHOTOS'}]
 ```
 
-##Requirements
+## Requirements
 
 The Edmunds API Python wrapper requires the amazing [requests library](http://docs.python-requests.org/en/latest/).
 Here are the [installation instructions](http://docs.python-requests.org/en/latest/user/install/#install) and the
 [source code](https://github.com/kennethreitz/requests/).
 
-##Issues
+## Contents
+
+```python
+sdk-python/
+   edmunds/
+      examples/ # Examples of using the SDK
+         README.md
+         media_photos.py
+      __init__.py
+      edmunds.py # The source code for the SDK
+   
+   .gitignore
+   AUTHORS.md # Info about development and how to contribute
+   HISTORY.md # Version history
+   LICENSE
+   README.md # You're looking at it!
+   requirements.txt
+```
+
+## Issues
 
 Please submit any problems, requests, and comments [here](https://github.com/EdmundsAPI/sdk-python/issues).
 
-##License
+## License
 TBD
