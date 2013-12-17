@@ -26,7 +26,7 @@ Note: '...' indicates more data removed here clarity & conciseness.
 
 ### 2. Spec: Make
 
-This example has one function, `get_makes` which takes three optional parameters (`year`, `state`, and `view`) and returns the JSON response object of the list of makes. The example below is showing the *2013 new* makes, but any `year` and/or `state` can be swapped in.
+This example has one function, `get_makes` which takes three optional parameters (`year`, `state`, and `view`) and returns the JSON response object of the list of makes. The example below is showing the *2013 new* makes, but any `year` and/or `state` can be swapped in. The endpoint used in this example is [Get List of Car Makes](http://developer.edmunds.com/api-documentation/vehicle/spec_make/v2/01_list_of_makes/api-description.html).
 
 #### Usage
 
