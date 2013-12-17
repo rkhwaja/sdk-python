@@ -1,4 +1,9 @@
-#History
+# History
 
-##0.0.1 (2013-10-04)
+## 0.1.0 (2013-12-17)
+* Beta release with more error checking
+* More examples
+* Test file
+
+## 0.0.1 (2013-10-04)
 * Development begins
