@@ -1,5 +1,3 @@
-### THE EDMUNDS API PYTHON WRAPPER IS UNDER DEVELOPMENT!
-
 # Edmunds API Python Wrapper
 
 This is an awesome Python 2 wrapper for the [Edmunds.com API](http://developer.edmunds.com/api-documentation/overview/index.html).
@@ -97,5 +95,14 @@ sdk-python/
 
 Please submit any problems, requests, and comments [here](https://github.com/EdmundsAPI/sdk-python/issues).
 
+## SDK Status
+
+This is a beta release. We have opened sourced it at this stage to guide the development of the library and allow you to freely inspect and use the source.
+
+## Documentation
+
+The Edmunds API documentation can be found [here](http://developer.edmunds.com/api-documentation/overview/index.html).
+
 ## License
-TBD
+
+Licensed under the Apache v2 License.
