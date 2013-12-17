@@ -3,11 +3,11 @@ Edmunds.com API Python wrapper
 Edmunds API Documentation: http://developer.edmunds.com/
 
 author: Michael Bock <mbock@edmunds.com>
-version: 0.0.1
+version: 0.1.0
 """
 
 import requests
-from types import StringType
+from types import StringType, BooleanType
 
 class Edmunds:
 	"""
@@ -15,18 +15,24 @@ class Edmunds:
 	"""
 	
 	BASE_URL = 'https://api.edmunds.com'
-	BASE_MEDIA = 'http://media.ed.edmunds-media.com'
+	BASE_MEDIA_URL = 'http://media.ed.edmunds-media.com'
 
-	def __init__(self, key):
+	def __init__(self, key, debug):
 		"""
 		Constructor for Edmunds class
 
 		:param key: Edmunds API key
+		:param debug: True or False. If True, prints error messages
 		:type key: str
 		"""
+
+		if not isinstance(debug, BooleanType):
+			raise Exception('debug is not a BooleanType; class not instantiated')
+		self._debug = debug
+
 		if not isinstance(key, StringType):
 			raise Exception('key not a StringType; class not instantiated')
-		self.parameters = {'api_key' : key, 'fmt': 'json'}
+		self._parameters = {'api_key' : key, 'fmt': 'json'}
 
 	def make_call(self, endpoint, **kwargs):
 		"""
@@ -44,8 +50,31 @@ class Edmunds:
 		:rtype: JSON object
 		"""
 		# assemble url and queries
-		payload = dict(self.parameters.items() + kwargs.items())
+		payload = dict(self._parameters.items() + kwargs.items())
 		url = self.BASE_URL + endpoint
+
 		# make request
-		r = requests.get(url, params=payload)
-		return r.json()
+		try:
+			r = requests.get(url, params=payload)
+		# ConnectionError would result if an improper url is assembeled
+		except requests.ConnectionError:
+			if self._debug:
+				print 'ConnectionError: URL was probably incorrect'
+			return None
+		except requests.Timeout:
+			if self._debug:
+				print 'Timeout Error'
+			return None
+
+		# extract JSON
+		try:
+			response_json = r.json()
+		# ValueError would result if JSON cannot be parsed
+		except ValueError:
+			if self._debug:
+				print 'ValueError: JSON could not be parsed'
+				print 'Response:'
+				print r.text
+			return None
+
+		return response_json

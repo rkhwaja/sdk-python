@@ -11,7 +11,7 @@ and [Edmunds editorial content](http://developer.edmunds.com/api-documentation/e
 Enter your [Edmunds API key](http://edmunds.mashery.com/member/register/):
 ```python
 from edmunds import Edmunds
-api = Edmunds('YOUR API KEY')
+api = Edmunds('YOUR API KEY', False) # False indicates debug mode is off, True prints error messages
 ```
 
 Make API calls to any endpoint, get a JSON object returned.
@@ -76,19 +76,19 @@ Here are the [installation instructions](http://docs.python-requests.org/en/late
 
 ```python
 sdk-python/
-   edmunds/
-      examples/ # Examples of using the SDK
-         README.md
-         media_photos.py
-      __init__.py
-      edmunds.py # The source code for the SDK
-   
    .gitignore
    AUTHORS.md # Info about development and how to contribute
    HISTORY.md # Version history
    LICENSE
    README.md # You're looking at it!
    requirements.txt
+   edmunds/
+      examples/ # Examples of using the SDK
+         README.md
+         media_photos.py
+      __init__.py
+      edmunds.py # The source code for the SDK
+      tests.py
 ```
 
 ## Issues

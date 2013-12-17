@@ -3,7 +3,6 @@ Edmunds.com API Python wrapper - Media: Photos Example
 Edmunds API Documentation: http://developer.edmunds.com/
 
 author: Michael Bock <mbock@edmunds.com>
-version: 0.0.1
 """
 
 import os, sys
@@ -37,7 +36,7 @@ def get_style_id(api, make, model, year):
 
 	# error checking
 	if (not response or 'error' in response or 
-			'errorType' in response or not 'styles' in response):
+		'errorType' in response or not 'styles' in response):
 		print "Error in get_style_id"
 		if 'error' in response:
 			if 'message' in response['error']:
@@ -87,18 +86,17 @@ def get_photos(api, style_id):
 		if key not in result:
 			result[key] = []
 		for url_stub in obj['photoSrcs']:
-			full_url = api.BASE_MEDIA + url_stub
+			full_url = api.BASE_MEDIA_URL + url_stub
 			result[key].append(full_url)
 	return result
 
-def get_model_s_photos():
+def get_model_s_photos(api):
 	"""
 	Get photos of the 2013 Tesla Model S
 
 	:returns: Dictionary of Lists of photo URLS (see return value of get_photos for more info)
 	:rtype: dict or None
 	"""
-	api = Edmunds('YOUR API KEY')
 
 	style_id = get_style_id(api, 'tesla', 'models', '2013')
 	photo_urls = None
@@ -109,4 +107,5 @@ def get_model_s_photos():
 	return photo_urls
 
 if __name__ == "__main__":
-	get_model_s_photos()
+	api = Edmunds('YOUR API KEY', True)
+	print get_model_s_photos(api)
