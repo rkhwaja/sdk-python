@@ -1,5 +1,7 @@
 # Edmunds API Python Wrapper Examples
 
+Note: before running any of the examples, be sure to [register for a key](http://edmunds.mashery.com/member/register/) and insert it into the code when the Edmunds class is instantiated: `Edmunds('YOUR API KEY')`.
+
 ## Contents
 1. [Media: Photos Example](#1-media-photos)
 2. [Spec: Make Example](#2-spec-make)
