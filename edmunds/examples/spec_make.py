@@ -54,5 +54,5 @@ def get_makes(api, year=None, state=None, view=None):
 	return response
 
 if __name__ == "__main__":
-	api = Edmunds('YOUR API KEY', True)
+	api = Edmunds('YOUR API KEY', True) # True indicates debug mode is ON
 	print get_makes(api, '2013', 'new')

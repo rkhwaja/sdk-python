@@ -11,7 +11,7 @@ and [Edmunds editorial content](http://developer.edmunds.com/api-documentation/e
 Enter your [Edmunds API key](http://edmunds.mashery.com/member/register/):
 ```python
 from edmunds import Edmunds
-api = Edmunds('YOUR API KEY', False) # False indicates debug mode is off, True prints error messages
+api = Edmunds('YOUR API KEY') # use Edmunds('YOUR API KEY', True) for debug mode
 ```
 
 Make API calls to any endpoint, get a JSON object returned.
@@ -86,6 +86,7 @@ sdk-python/
       examples/ # Examples of using the SDK
          README.md
          media_photos.py
+         spec_make.py
       __init__.py
       edmunds.py # The source code for the SDK
       tests.py

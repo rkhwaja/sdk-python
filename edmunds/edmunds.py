@@ -3,7 +3,7 @@ Edmunds.com API Python wrapper
 Edmunds API Documentation: http://developer.edmunds.com/
 
 author: Michael Bock <mbock@edmunds.com>
-version: 0.1.0
+version: 0.1.1
 """
 
 import requests
@@ -17,7 +17,7 @@ class Edmunds:
 	BASE_URL = 'https://api.edmunds.com'
 	BASE_MEDIA_URL = 'http://media.ed.edmunds-media.com'
 
-	def __init__(self, key, debug):
+	def __init__(self, key, debug=False):
 		"""
 		Constructor for Edmunds class
 

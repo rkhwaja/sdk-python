@@ -7,7 +7,7 @@ author: Michael Bock <mbock@edmunds.com>
 
 from edmunds import Edmunds
 
-api = Edmunds('YOUR API KEY', True)
+api = Edmunds('YOUR API KEY')
 
 # Test 1: No URL Path
 assert api.make_call('') == None

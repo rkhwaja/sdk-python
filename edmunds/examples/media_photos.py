@@ -107,5 +107,5 @@ def get_model_s_photos(api):
 	return photo_urls
 
 if __name__ == "__main__":
-	api = Edmunds('YOUR API KEY', True)
+	api = Edmunds('YOUR API KEY', True) # True indicates debug mode is ON
 	print get_model_s_photos(api)
