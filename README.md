@@ -3,7 +3,7 @@
 This is an awesome Python 2 wrapper for the [Edmunds.com API](http://developer.edmunds.com/api-documentation/overview/index.html).
 The Edmunds.com API provides automative data including [vehicle specs](http://developer.edmunds.com/api-documentation/vehicle/), 
 [pricing](http://developer.edmunds.com/api-documentation/vehicle/price_tmv/v1/), [media](http://developer.edmunds.com/api-documentation/vehicle/media_photos/v1/), 
-[reviews](http://developer.edmunds.com/api-documentation/vehicle/content_ratings_and_reviews/v2/), and more. 
+[reviews](http://developer.edmunds.com/api-documentation/vehicle/content_ratings_and_reviews/v2/), and [more](http://developer.edmunds.com/api-documentation/overview/index.html#sec-6). 
 There are also Edmunds API endpoints for [dealership information](http://developer.edmunds.com/api-documentation/dealer/) 
 and [Edmunds editorial content](http://developer.edmunds.com/api-documentation/editorial/).
 
