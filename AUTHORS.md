@@ -1,5 +1,5 @@
 ## Development
-* Michael Bock \<mbock@edmunds.com\>
+* Michael Bock
 * You? Open a pull request!
 
 ## Patches or Suggestions?
