@@ -1,5 +1,6 @@
 ## Development
-* Michael Bock
+* [Michael Bock](https://github.com/michaelrbock)
+* [joepeg](https://github.com/joepeg)
 * You? Open a pull request!
 
 ## Patches or Suggestions?
