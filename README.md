@@ -76,6 +76,19 @@ To install using pip:
 
 ```pip install git+https://github.com/EdmundsAPI/sdk-python```
 
+Then:
+
+```git clone https://github.com/EdmundsAPI/sdk-python.git```
+or just click "Clone in Desktop" or "Download ZIP"
+
+![Install](https://photos-2.dropbox.com/t/0/AAAwB573IRFx7wrFhdmUilGQBgIcSTEjKFIoQ2sf1XsNMw/12/16428977/png/1024x768/3/1397286000/0/2/Screenshot%202014-04-12%2013.29.55.png/Aacyj_dQNGVCjJbyiazWcdk6538H61urhhFak44v-FA)
+
+
+Notes: 
+* Using pip to install this package will atuomatically install the requests library
+* The files (edmunds.py and tests.py) will be installed to your Python site-packages folder
+* It is suggested you then clone the repository (using the second command) in order to download all of the files to your computer and so that you can insert your API Key into the edmunds.py code
+
 ## Contents
 
 ```python
