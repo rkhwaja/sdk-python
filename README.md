@@ -86,6 +86,7 @@ sdk-python/
    LICENSE
    README.md # You're looking at it!
    requirements.txt
+   setup.py
    edmunds/
       examples/ # Examples of using the SDK
          README.md
