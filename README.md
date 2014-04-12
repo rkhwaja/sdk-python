@@ -97,6 +97,8 @@ sdk-python/
    AUTHORS.md # Info about development and how to contribute
    HISTORY.md # Version history
    LICENSE
+   MANIFEST
+   MANIFEST.in
    README.md # You're looking at it!
    requirements.txt
    setup.py
