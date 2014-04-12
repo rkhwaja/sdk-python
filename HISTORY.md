@@ -1,4 +1,7 @@
-# History
+# History (YYYY-MM-DD)
+
+## 0.1.2 (2014-04-12)
+* Added pip installation support (thanks to contributor [joepeg](https://github.com/joepeg)!)
 
 ## 0.1.1 (2013-12-18)
 * Made debug parameter optional, default to False
