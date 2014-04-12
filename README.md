@@ -66,11 +66,15 @@ for the style ID 3883 (1990 Honda Civic 2dr Hatchback):
   u'type': u'PHOTOS'}]
 ```
 
-## Requirements
+## Installation 
 
 The Edmunds API Python wrapper requires the amazing [requests library](http://docs.python-requests.org/en/latest/).
 Here are the [installation instructions](http://docs.python-requests.org/en/latest/user/install/#install) and the
 [source code](https://github.com/kennethreitz/requests/).
+
+To install using pip:
+
+```pip install git+https://github.com/EdmundsAPI/sdk-python```
 
 ## Contents
 
