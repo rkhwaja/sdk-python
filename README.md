@@ -74,7 +74,7 @@ Here are the [installation instructions](http://docs.python-requests.org/en/late
 
 To install using pip:
 
-```pip install git+https://github.com/EdmundsAPI/sdk-python```
+```pip install edmunds``` or ```pip install git+https://github.com/EdmundsAPI/sdk-python```
 
 Then:
 
