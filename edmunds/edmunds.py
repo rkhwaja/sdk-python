@@ -6,8 +6,16 @@ author: Michael Bock <mbock@edmunds.com>
 version: 0.1.1
 """
 
+from __future__ import print_function
+
 import requests
-from types import StringType, BooleanType
+try:
+	# python 3
+	StringType = str
+	BooleanType = bool
+except ImportError:
+	# python 2
+	from types import StringType, BooleanType
 
 class Edmunds:
 	"""
@@ -50,7 +58,7 @@ class Edmunds:
 		:rtype: JSON object
 		"""
 		# assemble url and queries
-		payload = dict(self._parameters.items() + kwargs.items())
+		payload = dict(list(self._parameters.items()) + list(kwargs.items()))
 		url = self.BASE_URL + endpoint
 
 		# make request
@@ -59,11 +67,11 @@ class Edmunds:
 		# ConnectionError would result if an improper url is assembeled
 		except requests.ConnectionError:
 			if self._debug:
-				print 'ConnectionError: URL was probably incorrect'
+				print('ConnectionError: URL was probably incorrect')
 			return None
 		except requests.Timeout:
 			if self._debug:
-				print 'Timeout Error'
+				print('Timeout Error')
 			return None
 
 		# extract JSON
@@ -72,9 +80,9 @@ class Edmunds:
 		# ValueError would result if JSON cannot be parsed
 		except ValueError:
 			if self._debug:
-				print 'ValueError: JSON could not be parsed'
-				print 'Response:'
-				print r.text
+				print('ValueError: JSON could not be parsed')
+				print('Response:')
+				print(r.text)
 			return None
 
 		return response_json
