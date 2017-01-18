@@ -25,14 +25,17 @@ class Edmunds:
 	BASE_URL = 'https://api.edmunds.com'
 	BASE_MEDIA_URL = 'http://media.ed.edmunds-media.com'
 
-	def __init__(self, key, debug=False):
+	def __init__(self, key, timeout, debug=False):
 		"""
 		Constructor for Edmunds class
 
 		:param key: Edmunds API key
+		:param timeout: Timeout for http call in seconds
 		:param debug: True or False. If True, prints error messages
 		:type key: str
 		"""
+
+		self._timeout = timeout
 
 		if not isinstance(debug, BooleanType):
 			raise Exception('debug is not a BooleanType; class not instantiated')
@@ -63,7 +66,7 @@ class Edmunds:
 
 		# make request
 		try:
-			r = requests.get(url, params=payload)
+			r = requests.get(url, timeout=self._timeout, params=payload)
 		# ConnectionError would result if an improper url is assembeled
 		except requests.ConnectionError:
 			if self._debug:
