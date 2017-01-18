@@ -1,2 +1,2 @@
-from edmunds import Edmunds
+from .edmunds import Edmunds
 
